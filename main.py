@@ -35,6 +35,9 @@ schedule.every().day.at("00:00").do(send_hello_message)
 # 추가 테스트: 매시간 정각에도 실행 (테스트용)
 schedule.every().hour.at(":00").do(send_hello_message)
 
+# 테스트용: 매 1분마다 실행 🔥
+schedule.every(1).minutes.do(send_hello_message)
+
 print("🤖 텔레그램 봇이 시작되었습니다!")
 print(f"📱 BOT_TOKEN: {'✅ 설정됨' if BOT_TOKEN else '❌ 미설정'}")
 print(f"💬 CHAT_ID: {'✅ 설정됨' if CHAT_ID else '❌ 미설정'}")
